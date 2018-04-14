@@ -1,11 +1,10 @@
-package com.devglan.dao;
+package com.ajit.dao;
 
+import com.ajit.model.UserDetails;
 import org.springframework.data.repository.CrudRepository;
 
-import com.devglan.model.UserDetails;
-
 public interface UserDao extends CrudRepository<UserDetails, Long> {
-	
-	UserDetails findByEmail(String email);
-	
+
+    UserDetails findByEmail(String email);
+
 }
