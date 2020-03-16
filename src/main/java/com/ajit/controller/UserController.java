@@ -22,7 +22,7 @@ public class UserController {
 
     @RequestMapping("/hello")
     public String sayHello() {
-        return "Hello, world!";
+        return "ajit here!";
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
@@ -59,4 +59,12 @@ public class UserController {
         userService.delete(id);
         return new ResponseEntity<String>("success", HttpStatus.OK);
     }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
+    public ResponseEntity<String> deletes(@PathVariable(name = "id", value = "id") Long id) {
+
+        userService.delete(id);
+        return new ResponseEntity<String>("success", HttpStatus.OK);
+    }
+
 }
