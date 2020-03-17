@@ -1,6 +1,11 @@
 package com.ajit.model;
 
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table
 public class Employee {
     public String getFirstName() {
         return firstName;
