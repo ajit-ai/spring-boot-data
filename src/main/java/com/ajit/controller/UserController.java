@@ -20,11 +20,19 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    /**+
+     * sample hello
+     * @return
+     */
     @RequestMapping("/hello")
     public String sayHello() {
         return "ajit here!";
     }
 
+    /**+
+     *
+     * @return
+     */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ResponseEntity<List<UserDetails>> userDetails() {
 
@@ -32,6 +40,11 @@ public class UserController {
         return new ResponseEntity<List<UserDetails>>(userDetails, HttpStatus.OK);
     }
 
+    /**+
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public ResponseEntity<UserDetails> findById(@PathVariable(name = "id", value = "id") Long id) {
 
@@ -39,6 +52,11 @@ public class UserController {
         return new ResponseEntity<UserDetails>(userDetail, HttpStatus.OK);
     }
 
+    /**+
+     *
+     * @param userDetails
+     * @return
+     */
     @RequestMapping(method = RequestMethod.POST)
     public ResponseEntity<UserDetails> findById(@RequestBody UserDetails userDetails) {
 
@@ -46,6 +64,11 @@ public class UserController {
         return new ResponseEntity<UserDetails>(userDetail, HttpStatus.OK);
     }
 
+    /**+
+     *
+     * @param email
+     * @return
+     */
     @RequestMapping(value = "/email/{email:.+}", method = RequestMethod.GET)
     public ResponseEntity<UserDetails> findById(@PathVariable(name = "email", value = "email") String email) {
 
@@ -53,6 +76,11 @@ public class UserController {
         return new ResponseEntity<UserDetails>(userDetail, HttpStatus.OK);
     }
 
+    /**+
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<String> delete(@PathVariable(name = "id", value = "id") Long id) {
 
@@ -60,6 +88,11 @@ public class UserController {
         return new ResponseEntity<String>("success", HttpStatus.OK);
     }
 
+    /**+
+     *
+     * @param id
+     * @return
+     */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<String> deletes(@PathVariable(name = "id", value = "id") Long id) {
 
