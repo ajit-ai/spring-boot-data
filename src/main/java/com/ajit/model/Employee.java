@@ -14,8 +14,10 @@ public class Employee {
     @Column
     private String firstName;
     @Column
-    private String lastNamr;
+    private String lastName;
 
+    @Column
+    private Address address;
     public String getFirstName() {
         return firstName;
     }
@@ -25,11 +27,11 @@ public class Employee {
     }
 
     public String getLastNamr() {
-        return lastNamr;
+        return lastName;
     }
 
     public void setLastNamr(String lastNamr) {
-        this.lastNamr = lastNamr;
+        this.lastName = lastNamr;
     }
 
 
