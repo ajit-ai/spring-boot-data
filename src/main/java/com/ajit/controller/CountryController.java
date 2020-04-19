@@ -17,5 +17,10 @@ public class CountryController {
         return  "Thisis second commit.";
     }
 
+    @RequestMapping(name = "/coun")
+    public String getValuFor() {
+        return  "Thisis third commit.";
+    }
+
 
 }
