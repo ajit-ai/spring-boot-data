@@ -27,4 +27,8 @@ public class SwaggerConfig {
         String x = "India";
 
     }
+
+    public String GetString() {
+        return "India";
+    }
 }
