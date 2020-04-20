@@ -12,6 +12,8 @@ public class CountryController {
         return "This is test country";
 
     }
+
+
     @RequestMapping(name = "/countries")
     public String getValues() {
         return  "Thisis second commit.";
@@ -21,8 +23,6 @@ public class CountryController {
     public String getValuFor() {
         return  "Thisis third commit.";
     }
-
-
 
 
     @RequestMapping(name = "/country/city")
