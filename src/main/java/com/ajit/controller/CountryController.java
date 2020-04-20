@@ -23,4 +23,12 @@ public class CountryController {
     }
 
 
+
+
+    @RequestMapping(name = "/country/city")
+    public String getValuFors() {
+        return  "Thisis fourth  commit.";
+    }
+
+
 }
